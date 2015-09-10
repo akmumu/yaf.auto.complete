@@ -1654,6 +1654,28 @@ abstract class Yaf_Request_Abstract
 
     /**
      * (Yaf >= 2.2.9)
+     * fetch a query parameter
+     *
+     * @param string $name 变量名
+     * @param string $default 默认值
+     *
+     * @return mixed
+     */
+    public function getQuery($name, $default = null){}
+
+    /**
+     * (Yaf >= 2.2.9)
+     * 返回POST变量
+     *
+     * @param string $name 变量名
+     * @param string $default 默认值
+     *
+     * @return mixed
+     */
+    public function getPost($name, $default = null){}
+
+    /**
+     * (Yaf >= 2.2.9)
      * 获取异常对象
      *
      * 异常捕获模式下，在异常发生的情况时流程进入Error控制器的error动作时，获取当前发生的异常对象.
