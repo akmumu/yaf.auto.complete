@@ -936,6 +936,13 @@ namespace Yaf
         public function getViewPath(){}
 
         /**
+         * (Yaf >= 2.2.9)
+         * 获取模板对象
+         * @return View_Interface
+         */
+        public function getView(){}
+
+        /**
          * (Yaf >= 2.2.9) 
          * 将当前的请求转交给另外的Action（对用户来说是透明的，相当于Web服务器的代理）.
          *

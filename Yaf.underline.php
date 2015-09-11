@@ -931,6 +931,13 @@ abstract class Yaf_Controller_Abstract
 
     /**
      * (Yaf >= 2.2.9)
+     * 获取模板对象
+     * @return Yaf_View_Interface
+     */
+    public function getView(){}
+
+    /**
+     * (Yaf >= 2.2.9)
      * 将当前的请求转交给另外的Action（对用户来说是透明的，相当于Web服务器的代理）.
      *
      * 调用Yaf_Controller_Abstract::forward()以后，不会直接立即跳转到目的Action执行，
@@ -1055,7 +1062,7 @@ interface Yaf_View_Interface
      *
      * @return Boolean
      */
-    public function display($tpl, $var_array);
+    public function display($tpl, $var_array = array());
 
     /**
      * (Yaf >= 2.2.9)
