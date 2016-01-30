@@ -851,6 +851,9 @@ abstract class Yaf_Controller_Abstract
      * (Yaf >= 2.2.9)
      * 视图对象
      *
+     * PHP代码中也可以这样获取：
+     * $view = $this->getView();
+     *
      * @var Yaf_View_Interface
      */
     protected $_view;
@@ -910,6 +913,14 @@ abstract class Yaf_Controller_Abstract
      * @return Yaf_Controller_Abstract
      */
     public function initView(){}
+
+    /**
+     * (Yaf >= 2.2.9)
+     * 返回视图对象
+     *
+     * @return Yaf_View_Interface
+     */
+    public function getView(){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2824,10 +2835,11 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      * 获取$_GET中名为$name的参数值
      *
      * @param string $name 变量名
+     * @param string $default 默认值
      *
      * @return mixed
      */
-    public function getQuery($name = null){}
+    public function getQuery($name = null, $default = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2844,10 +2856,11 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      * 获取$_POST中名为$name的参数值
      *
      * @param string $name 变量名
+     * @param string $default 默认值
      *
      * @return mixed
      */
-    public function getPost($name = null){}
+    public function getPost($name = null, $default = null){}
 
     /**
      * (Yaf >= 2.2.9)
